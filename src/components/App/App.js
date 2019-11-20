@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import PrivateRoute from '../Utils/PrivateRoute'
-import MainPage from '../MainPage/MainPage'
+import Main from '../Main/Main'
+import LogInPage from '../../Routes/LogInPage/LogInPage'
+import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute/PublicOnlyRoute'
+import RegistrationPage from '../../Routes/RegistrationPage/RegistrationPage'
+import PrivateRoute from '../Utils/PrivateOnlyRoute/PrivateRoute'
+import ItemsListPage from '../../Routes/ItemsListPage/ItemsListPage'
 
 
 export class App extends Component {
@@ -26,7 +30,21 @@ export class App extends Component {
                 <Route
                     exact 
                     path={'/'}
-                    component={MainPage}
+                    component={Main}
+                />
+
+                <PublicOnlyRoute
+                    path={'/login'}
+                    component={LogInPage}
+                />
+
+                <PublicOnlyRoute
+                    path={'/register'}
+                    component={RegistrationPage}
+                />
+                <PublicOnlyRoute
+                    path={'/category'}
+                    component={ItemsListPage}
                 />
 
             </Switch>

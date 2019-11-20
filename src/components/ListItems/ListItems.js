@@ -8,8 +8,12 @@ export class ListItems extends Component {
 
         return (
         <Link to={`/category/${category.id}`} className='cat_list'>
-            <div ></div>
+            <div >{category.name}</div>
         </Link>
+
+        
+
+
       
         
         )
