@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
-
-export default class AddItem extends Component {
+export class MainPage extends Component {
     render() {
         return (
             <div>
@@ -12,6 +10,4 @@ export default class AddItem extends Component {
     }
 }
 
-
-
-
+export default MainPage

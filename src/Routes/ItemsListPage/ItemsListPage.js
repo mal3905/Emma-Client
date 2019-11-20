@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import ListItems from '.'
 
-export class Header extends Component {
+
+export class ItemsListPage extends Component {
     render() {
         return (
             <div>
-                Hello Im the Header
+                
             </div>
         )
     }
 }
 
-export default Header
+export default ItemsListPage

@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
-// import ItemsListNav from '../src/ItemsListNav'
-import ItemsPageNav from '../ItemsPageNav/ItemsPageNav'
 import RegistrationForm from '../RegistrationForm/RegistrationForm'
-// import ItemsListMain from '..src/ItemListMain/ItemListMain'
-// import ItemsPageMain from '..src/ItemsPageMain/ItemsPageMain'
-// import AddItem from '../src/AddItem/AddItem'
+import AddItem from '../AddItem/AddItem'
 import config from '../config' 
 import ApiContext from '../ApiContext'
-import AddItem from '../AddItem/AddItem';
+import LogIn from '../LogIn/LogIn'
+import ListItems from '../ListItems/ListItems'
 
 class App extends Component {
   state= {
@@ -48,57 +45,10 @@ class App extends Component {
       items: this.state.items.filter(item => item.id !== itemId)
     })
   }
- 
-  RenderNavRoutes() {
+
+  renderRoutes() {
     return (
       <>
-      {/* {['/', '/category/:categoryId'].map(path => 
-        <Route 
-          exact
-          key={path}
-          path={path}
-          component={ItemsListNav}
-        />
-    )}  */}
-
-    <Route 
-      path='/item/:itemId'
-      component={ItemsPageNav}
-    />
-
-    {/* <Route 
-      path='/add-category'
-      component={ItemPageNav}
-    /> */}
-
-    <Route 
-      path='/add-item'
-      component={ItemsPageNav}
-    />
-    </>
-    )
-  }
-  RenderMainRoutes() {
-    return (
-      <>
-
-      {/* {['/', '/category/:categoryId'].map(path => 
-        <Route 
-          exact
-          key={path}
-          path={path}
-          component={ItemListMain}
-        />
-      )} */}
-
-      {/* <Route 
-        path='/item/itemId'
-        component={ItemPageMain}
-      /> */}
-      {/* <Route 
-        path='/add-category'
-        component={Item}
-      /> */}
 
       <Route 
         exact 
@@ -110,6 +60,18 @@ class App extends Component {
         exact
         path='/register'
         component={RegistrationForm}
+      />
+
+      <Route
+        exact 
+        path='/login'
+        component={LogIn}
+      />
+
+      <Route
+        exact 
+        path='/list'
+        component={ListItems}
       />
 
 
@@ -127,12 +89,14 @@ class App extends Component {
       <ApiContext.Provider value={value}>
         <div className='App'>
           <nav className='App_nav'>
-            {this.RenderNavRoutes()}
+         
           </nav>
           <header className='App_header'>
             <h1>
-              <Link to='/'>Emma: Your Virtual Grocery Asssitant</Link>
+              <Link to='/'>login/out</Link>
               {' '}
+              {' '}
+              <Link to='/'>Register</Link>
             </h1>
           </header>
           <section>
@@ -148,7 +112,7 @@ class App extends Component {
               list for you based on how often you buy a product.</p>
         </section>
           <main className='App_main'>
-            {this.RenderMainRoutes()}
+            {this.renderRoutes()}
           </main>
         </div>
       </ApiContext.Provider>
