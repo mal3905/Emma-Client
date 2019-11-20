@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import PrivateRoute from '../Utils/PrivateRoute'
+import MainPage from '../MainPage/MainPage'
 
 
 export class App extends Component {
@@ -22,10 +23,10 @@ export class App extends Component {
         <main className='App__main'>
           {this.state.hasError && <p className='red'>Error!</p>}
             <Switch>
-          
-                <PrivateRoute
-                path={'/list/listid'}
-                component={}
+                <Route
+                    exact 
+                    path={'/'}
+                    component={MainPage}
                 />
 
             </Switch>
