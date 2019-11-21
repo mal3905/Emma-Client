@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Context from '../../contexts/Contexts'
 import { Link } from 'react-router-dom'
 
 
@@ -7,7 +6,7 @@ export class MainPage extends Component {
     render() {
         
         return (
-            <Context.Provider>
+            
             <div className='App'>
               <nav className='App_nav'>
                 {/* {this.()} */}
@@ -36,9 +35,6 @@ export class MainPage extends Component {
            
               </main>
             </div>
-          </Context.Provider>
-
-    
         )
     }
 }

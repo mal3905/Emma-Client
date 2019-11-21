@@ -17,8 +17,8 @@ const EmmaApiService = {
             : res.json())
     },
     //Get category by id
-    getCat(catId) {
-        return fetch(`${config.API_ENDPOINT}/Category/${catId}`, {
+    getCat(categoryid) {
+        return fetch(`${config.API_ENDPOINT}/Category/${categoryid}`, {
             headers: {
                 'authorization': `basic${TokenService.getAuthToken()}`,
             },
@@ -29,8 +29,9 @@ const EmmaApiService = {
             :res.json())
     },
 
-    getItems(catId) {
-        return fetch(`${config.API_ENDPOINT}/Category/${catId}/items`, {
+    getCatItems(categoryid) {
+
+        return fetch(`${config.API_ENDPOINT}/Category/${categoryid}/items`, {
             headers: {
                 'authorization' : `basic ${TokenService.getAuthToken()}`,
             },

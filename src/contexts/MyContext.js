@@ -6,8 +6,13 @@ export default React.createContext({
   category: [],
   addCategory: () => {},
   addItem: () => {},
-  deleteItem: () => {},
+  // deleteItem: () => {},
+  // clearError: () => {},
+  setAllCategories: () => {},
+  setAllitems: () => {}
+  
 })
+
 
 
 

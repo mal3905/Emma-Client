@@ -1,43 +1,46 @@
 import React, { Component } from 'react'
 import ListItems from '../../components/ListItems/ListItems'
-import Context from '../../contexts/Contexts'
-import { Section} from '../../components/Utils/Utils'
+import MyContext from '../../contexts/MyContext'
+import { Section } from '../../components/Utils/Utils'
 import EmmaApiService from '../../services/emma-api-service'
 
-
-export default  class ItemsListPage extends Component {
-    static contextType = Context 
+export class ItemsListPage extends Component {
+    static contextType = MyContext 
 
     componentDidMount() {
-        this.context.clearError()
-        EmmaApiService.getCats()
-            .then(this.context.setCatList)
-            .catch(this.context.setError)
+        // this.context.clearError()
+        EmmaApiService.getItems()
+            .then(this.context.setAllitems)
+    //         .catch(this.context.setError)
 
     }
-    renderCats() {
-        const {categoryList = [] } = this.context 
-        return categoryList.map( cat => 
+    renderItems() {
+        const {item = [] } = this.context
+        console.log(item)
+        return item.map( item => 
             <ListItems
-            key={cat.id}
-            item={cat}
+            key={item.id}
+            item={item}
             />
         )
     }
-
     render() {
-        const { error } = this.context
+        // const { error } = this.context
+        const error = null
 
         return (
-            <Section list className='CatListPAge'>
+        <div>
+            <Section list className='ItemsListPAge'>
+                Your Items 
                 {error
                 ? <p className='red'> Error Occured</p>
-                : this.renderCats()}
+                : this.renderItems()}
             </Section>
-        )
-    }
+         </div>
 
-      
+        )
+    }     
 }
+
 
 

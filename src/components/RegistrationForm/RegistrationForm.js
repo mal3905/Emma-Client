@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, Input, Required} from '../Utils/Utils'
 
 export default class RegistrationForm extends Component {
     static defaultProps = {
@@ -30,17 +31,32 @@ export default class RegistrationForm extends Component {
             </div>
 
               <h2>Sign me Up!</h2>
-              <label htmlFor='email'>email</label>
-              <input type="text" placeholder="enter email" name="email" required/>
 
-              <label htmlFor="psw">Password</label>
-              <input type="password" placeholder="Enter Password" name="psw" required/>
+              <label htmlFor='email'>
+                  email <Required/>
+              </label>
+              <Input 
+              type="text" 
+              placeholder="enter email" 
+              name="email" 
+              required>
+              </Input>
 
-              <label htmlFor="psw-repeat"> Repeat Password</label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" required/>
+              <label htmlFor='password'>
+                  Password <Required /> 
+              </label>
+              <Input 
+              type="password" 
+              placeholder="Enter Password" 
+              name="password" 
+              required>
+              </Input>
 
-              <button type="button" className="cancelbtn">Cancel</button>
-              <button type="submit" className="submitbtn" >Sign Up</button>
+              <Button type="submit" 
+              className="submitbtn">
+              Sign Up
+              </Button>
+
             </form>
         </section>
         )

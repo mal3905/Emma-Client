@@ -4,18 +4,13 @@ import { Link } from 'react-router-dom'
 
 export class ListItems extends Component {
     render() {
-        const { category } = this.props 
+        const { items } = this.props 
 
         return (
-        <Link to={`/category/${category.id}`} className='cat_list'>
-            <div >{category.name}</div>
+        <Link to={`/items/${items.id}`} className='item_list'>
+            <div >{items.name}</div>
         </Link>
 
-        
-
-
-      
-        
         )
     }
 }
