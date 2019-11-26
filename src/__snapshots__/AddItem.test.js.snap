@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddItem component renders the complete form 1`] = `
+<section
+  className="AddItem"
+>
+  <h2
+    className="create-item"
+  >
+    Create Item
+  </h2>
+  <EmmaForm
+    onSubmit={[Function]}
+  >
+    <div
+      className="field"
+    >
+      <label
+        htmlFor="item-name-input"
+      />
+      <input
+        id="item-name-input"
+        name="item-name"
+        placeholder="name"
+        type="text"
+      />
+    </div>
+    <div
+      className="field"
+    >
+      <label
+        htmlFor="item-category-select"
+      />
+      <select
+        id="item-category-select"
+        name="item-category-id"
+      >
+        <option
+          value={null}
+        >
+          Select Category
+        </option>
+      </select>
+    </div>
+    <div
+      className="buttons"
+    >
+      <button
+        type="submit"
+      >
+        Add
+      </button>
+    </div>
+  </EmmaForm>
+</section>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmmaForm component renders a form.EmmaForm by default 1`] = `
+<form
+  action="#"
+  className="Emma-form "
+/>
+`;
+
+exports[`EmmaForm component renders the EmmaForm given props 1`] = `
+<form
+  action="#"
+  className="Emma-form test-class-name"
+  data-other="test-other-prop"
+>
+  <p>
+    test children
+  </p>
+</form>
+`;
