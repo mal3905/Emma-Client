@@ -17,14 +17,17 @@ export default class ItemPageMain extends React.Component {
   }
 
   render() {
-    const { items=[] } = this.context
+    console.log('hello') 
+    let { items=[] } = this.context
     const { itemid } = this.props.match.params
-    const item = findItem(items, itemid) 
+    console.log(items)
+    items = findItem(items, itemid)
+    
     return (
       <section className='ItemPageMain'>
         <Item
-          itemid={item.id}
-          name={item.name}
+          itemid={items.id}
+          name={items.name}
           onDeleteItem={this.handleDeleteItem}
         />
       </section>

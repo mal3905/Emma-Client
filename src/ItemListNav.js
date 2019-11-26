@@ -10,7 +10,7 @@ export default class ItemListNav extends React.Component {
   static contextType = MyContext;
 
   render() {
-    const { categories=[], items=[] } = this.context
+    const { categories=[] } = this.context
     return (
       <div className='ItemListNav'>
         <ul className='ItemListNav__list'>

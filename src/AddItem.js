@@ -34,8 +34,7 @@ export default class AddItem extends Component {
       })
       .then(item  => {
         this.context.addItem(item)
-        this.props.history.push(`/item/${item.id}`)
-        // this.props.history.push(`/category/${item.categoryid}`)
+        this.props.history.push(`/`)
       })
       .catch(error => {
         console.error({ error })

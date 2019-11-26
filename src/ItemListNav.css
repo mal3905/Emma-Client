@@ -10,6 +10,7 @@
   max-width: 180px;
   padding: 4px 8px;
   text-decoration: none;
+  
 
   }
 
@@ -22,13 +23,13 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 12px;
+    margin-left: 40px;
    
   }
 
   .ItemListNav__list {
   display: flex;
-  justify-content: center;
-  margin: auto;
+  justify-content: space-evenly;
 
   }
 /* ul {

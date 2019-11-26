@@ -29,7 +29,6 @@ export default class ItemListMain extends React.Component {
     return (
       <section className='ItemList'>
         <section>
-            <h2>My List </h2>
         </section>
         <ul className='item-list'>
           {itemsForCategory.map(item =>

@@ -16,12 +16,12 @@ ul {
 
     text-decoration: none;
     padding: 5px;
-    margin-top: 30px;
     background: rgb(232, 163, 175);
     color: black;
     cursor: pointer;
     text-decoration: none;
     font-size: 12px;
+    margin-left: 39px;
 
    
 } 
@@ -29,3 +29,4 @@ ul {
 .ItemList_button-container{
 background: red;
 }
+

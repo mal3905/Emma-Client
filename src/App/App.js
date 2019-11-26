@@ -110,10 +110,10 @@ export default  class App extends Component {
                         component={ItemListMain}
                       />
                     )}
-                        <Route
+                        {/* <Route
                         path='/item/:itemid'
                         component={ItemPageMain}
-                        />
+                        /> */}
 
 
                         <Route 
@@ -148,7 +148,7 @@ export default  class App extends Component {
             <main className='App'>
                 <header className='header'>
                 <h1 className='title'>Emma</h1>
-                <h2 className='sub-title'> Grocery list assistant</h2>
+                <h2 className='sub-title'> Grocery List Assistant</h2>
                 </header>
                 <nav className='App__nav'>
                     {this.renderNavRoutes()}
