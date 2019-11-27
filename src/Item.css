@@ -10,6 +10,8 @@ button {
     font-size: 17px;
   }
 
-  /* .Item_title {
+  h2 {
       font-weight: lighter;
-  } */
+      font-size: 20px;
+    
+  }

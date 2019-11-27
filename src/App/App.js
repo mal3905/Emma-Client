@@ -7,7 +7,7 @@ import AddItem from '../AddItem'
 import ItemListMain from '../ItemListMain'
 import ItemPageNav from '../ItemPageNav'
 import ItemListNav from '../ItemListNav'
-import ItemPageMain from '../ItemPageMain'
+// import ItemPageMain from '../ItemPageMain'
 import './App.css'
 
 

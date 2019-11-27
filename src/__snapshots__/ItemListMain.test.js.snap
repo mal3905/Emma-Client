@@ -4,11 +4,7 @@ exports[`ItemListMain component renders a .ItemListMain by default 1`] = `
 <section
   className="ItemList"
 >
-  <section>
-    <h2>
-      My List 
-    </h2>
-  </section>
+  <section />
   <ul
     className="item-list"
   />
@@ -34,7 +30,6 @@ exports[`ItemListMain component renders a .ItemListMain by default 1`] = `
       to="/add-item"
       type="button"
     >
-      <br />
       add item
     </Button>
   </div>

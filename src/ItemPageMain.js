@@ -17,7 +17,7 @@ export default class ItemPageMain extends React.Component {
   }
 
   render() {
-    console.log('hello') 
+    // console.log('hello') 
     let { items=[] } = this.context
     const { itemid } = this.props.match.params
     console.log(items)
