@@ -1,10 +1,11 @@
+  
 import React from 'react'
 
 export default React.createContext({
   items: [],
-  category: [],
+  categories: [],
   addCategory: () => {},
-  addItem: () => {},
   deleteItem: () => {},
+  addItem: () => {}, 
+  
 })
-

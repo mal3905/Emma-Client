@@ -1,161 +1,169 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
-// import ItemsListNav from '../src/ItemsListNav'
-import ItemsPageNav from '../ItemsPageNav/ItemsPageNav'
-import RegistrationForm from '../RegistrationForm/RegistrationForm'
-// import ItemsListMain from '..src/ItemListMain/ItemListMain'
-// import ItemsPageMain from '..src/ItemsPageMain/ItemsPageMain'
-// import AddItem from '../src/AddItem/AddItem'
-import config from '../config' 
-import ApiContext from '../ApiContext'
-import AddItem from '../AddItem/AddItem';
-
-class App extends Component {
-  state= {
-    items: [],
-    category:[],
-  
-  };
-
-  componentDidMount() {
-    Promise.all([
-      fetch(`${config.API_ENDPOINT}/items`),
-    ])
-    .then(([itemsRes]) => {
-      if(!itemsRes.ok)
-        return itemsRes.json().then(e => Promise.reject(e))
-        return Promise.all([
-          itemsRes.json(),
-        ])
-    })
-    .then(([items]) => {
-      this.setState({items})
-    })
-    .catch(error => {
-      console.error({error})
-    })
-    
-  }
-  handleAddItem = item => {
-    this.setState({
-      items: [
-        this.state.items, item 
-      ]
-    })
-  }
-  handleDeleteItem = itemId =>{
-    this.setState({
-      items: this.state.items.filter(item => item.id !== itemId)
-    })
-  }
- 
-  RenderNavRoutes() {
-    return (
-      <>
-      {/* {['/', '/category/:categoryId'].map(path => 
-        <Route 
-          exact
-          key={path}
-          path={path}
-          component={ItemsListNav}
-        />
-    )}  */}
-
-    <Route 
-      path='/item/:itemId'
-      component={ItemsPageNav}
-    />
-
-    {/* <Route 
-      path='/add-category'
-      component={ItemPageNav}
-    /> */}
-
-    <Route 
-      path='/add-item'
-      component={ItemsPageNav}
-    />
-    </>
-    )
-  }
-  RenderMainRoutes() {
-    return (
-      <>
-
-      {/* {['/', '/category/:categoryId'].map(path => 
-        <Route 
-          exact
-          key={path}
-          path={path}
-          component={ItemListMain}
-        />
-      )} */}
-
-      {/* <Route 
-        path='/item/itemId'
-        component={ItemPageMain}
-      /> */}
-      {/* <Route 
-        path='/add-category'
-        component={Item}
-      /> */}
-
-      <Route 
-        exact 
-        path='/add-item'
-        component={AddItem}
-      />
-
-      <Route  
-        exact
-        path='/register'
-        component={RegistrationForm}
-      />
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import config from '../config'
+import MyContext from '../MyContext'
+import AddCategory from '../AddCategory'
+import AddItem from '../AddItem'
+import ItemListMain from '../ItemListMain'
+import ItemPageNav from '../ItemPageNav'
+import ItemListNav from '../ItemListNav'
+// import ItemPageMain from '../ItemPageMain'
+import './App.css'
 
 
-    </> 
-    )
-  }
 
-  render() {
-    const value = {
-      items: this.state.items,
-      addItem: this.state.handleAddItem,
-      deleteItem: this.state.handleDeleteItem,
+
+export default  class App extends Component {
+        state={
+            items: [],
+            categories: [],
+        }
+
+
+        componentDidMount() {
+            Promise.all([
+                fetch(`${config.API_ENDPOINT}/items`),
+                fetch(`${config.API_ENDPOINT}/category`)
+
+            ])
+            .then(([itemsRes, categoriesRes]) => {
+                if (!itemsRes.ok)
+                  return itemsRes.json().then(e => Promise.reject(e))
+                if (!categoriesRes.ok)
+                  return categoriesRes.json().then(e => Promise.reject(e))
+        
+                return Promise.all([
+                  itemsRes.json(),
+                  categoriesRes.json(),
+                ])
+              })
+              .then(([items, categories]) => {
+                this.setState({ items, categories })
+           
+              })
+              .catch(error => {
+                console.error({ error })
+              })
+          }
+
+
+
+        handleAddCategory = category =>  {
+            this.setState({
+                 categories: [ ...this.state.categories, category]
+                
+            }) 
+            // console.log(this.state)
+        }
+        
+        handleAddItem= item =>  {
+            this.setState({
+                 items: [ ...this.state.items, item]
+            })
+            // console.log(this.state)
+        }
+
+        handleDeleteItem = itemid => {
+            this.setState({
+              items: this.state.items.filter(item => item.id !== itemid)
+            })
+          }
+        
+
+        renderNavRoutes() {
+            return (
+              <>
+                {['/', '/category/:categoryid'].map(path =>
+                  <Route
+                    exact
+                    key={path}
+                    path={path}
+                    component={ItemListNav}
+                  />
+                )}
+                <Route
+                  path='/item/:itemId'
+                  component={ItemPageNav}
+                />
+                <Route
+                  path='/add-category'
+                  component={ItemPageNav}
+                />
+                <Route
+                  path='/add-item'
+                  component={ItemPageNav}
+                />
+              </>
+            )
+        }
+          
+            
+            renderRoutes() {
+                return (
+                    <>
+                    
+                    {['/', '/category/:categoryid'].map(path => 
+                        <Route
+                        exact
+                        key={path}
+                        path={path}
+                        component={ItemListMain}
+                      />
+                    )}
+                        {/* <Route
+                        path='/item/:itemid'
+                        component={ItemPageMain}
+                        /> */}
+
+
+                        <Route 
+                        path='/add-category'
+                        component={AddCategory}
+                        />
+
+                        <Route
+                        path='/add-item'
+                        component={AddItem}
+                        />
+                        
+                    </>
+                )
+          }
+        
+
+
+    render() {
+
+        const value = {
+            items: this.state.items,
+            categories: this.state.categories,
+            addCategories: this.handleAddCategory,
+            addItem: this.handleAddItem,
+            deleteItem: this.handleDeleteItem,
+   
+        }
+
+        return (
+        <MyContext.Provider value={value}>
+            <main className='App'>
+                <header className='header'>
+                <h1 className='title'>Emma</h1>
+                <h2 className='sub-title'> Grocery List Assistant</h2>
+                </header>
+                <nav className='App__nav'>
+                    {this.renderNavRoutes()}
+                </nav>
+                
+               
+                <section className='App__main'>
+                    {this.renderRoutes()}
+                </section>
+                   
+                </main>
+                </MyContext.Provider>
+            
+            
+        )
     }
-    return (
-      <ApiContext.Provider value={value}>
-        <div className='App'>
-          <nav className='App_nav'>
-            {this.RenderNavRoutes()}
-          </nav>
-          <header className='App_header'>
-            <h1>
-              <Link to='/'>Emma: Your Virtual Grocery Asssitant</Link>
-              {' '}
-            </h1>
-          </header>
-          <section>
-            <h2>No more headaches from scrouring your kitchen to see what you need!
-            </h2>
-            <p>With Emma, you can now save more time when when determining what you are running low on 
-            and what you need to buy. </p>
-        </section>
-        <section>
-            <h2>Start your list</h2>
-            <p>You start out by creating your weekly grocery list with Emma and Emma will begin 
-              learning how often you buy a product, and eventually start generating a tailored grocery 
-              list for you based on how often you buy a product.</p>
-        </section>
-          <main className='App_main'>
-            {this.RenderMainRoutes()}
-          </main>
-        </div>
-      </ApiContext.Provider>
-    )
-  }
 }
-      
-                                      
 
-export default App;

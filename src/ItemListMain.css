@@ -1,0 +1,32 @@
+
+/* for app title */
+ul {
+    list-style-type: none;
+}
+
+.item-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 4px solid rgba(83, 176, 194, 0.406);
+}
+
+.Item__add-item-button {
+
+    text-decoration: none;
+    padding: 5px;
+    background: rgb(232, 163, 175);
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 39px;
+
+   
+} 
+
+.ItemList_button-container{
+background: red;
+}
+

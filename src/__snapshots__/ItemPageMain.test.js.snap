@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemPageMain component renders a .ItemPageMain by default 1`] = `
+<section
+  className="ItemPageMain"
+>
+  <div
+    className="Item"
+  >
+    <h2
+      className="Item__title"
+    >
+      Dogs
+    </h2>
+    <button
+      className="Item__delete"
+      onClick={[Function]}
+      type="button"
+    >
+       
+      remove
+    </button>
+  </div>
+</section>
+`;

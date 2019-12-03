@@ -1,31 +1,58 @@
 import React from 'react';
-import { Link } from 'resct-router-dom'
-import ApiContext from '../ApiContext'
-import config from '../config'
+import MyContext from './MyContext';
+import config from './config';
+import './Item.css'
 
 
-
-export default class Item extends React.Component(props) {
-  static defaultProps = {
-    onDeleteItem: () => {},  
+export default class Item extends React.Component {
+  static defaultProps ={
+    onDeleteItem: () => {},
   }
-  static contextType  = ApiContext;
+  static contextType = MyContext;
 
   handleClickDelete = e => {
     e.preventDefault()
     const itemId = this.props.itemId
 
-    fetch(`${config.API_ENDPOINT}/items/${items}`, {
+    fetch(`${config.API_ENDPOINT}/items/${itemId}`, {
       method: 'DELETE',
+      // headers: {
+      //   'content-type': 'application/json'
+      // },
     })
-
+      .then(res => {
+        if (!res.ok)
+          return res.json().then(e => Promise.reject(e))
+        // return res.json()
+      })
+      .then(() => {
+        this.context.deleteItem(itemId)
+        // allow parent to perform extra behaviour
+        this.props.onDeleteItem(itemId)
+      })
+      .catch(error => {
+        console.error({ error })
+      })
   }
-  return (
-    <div className='item'>
 
-    
-      <h3>{props.title}</h3>
-      <p>{props.content}</p>
-    </div>
-  )
+  render() {
+    const { name } = this.props
+    return (
+      <div className='Item'>
+        <h2 className='Item__title'>
+          {/* <Link to={`/items/${itemId}`}> */}
+            {name}
+          {/* </Link> */}
+        </h2>
+        <button
+          className='Item__delete'
+          type='button'
+          onClick={this.handleClickDelete}
+        >
+          {' '}
+          remove
+        </button>
+      </div>
+    )
+  }
 }

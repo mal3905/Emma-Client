@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemListMain component renders a .ItemListMain by default 1`] = `
+<section
+  className="ItemList"
+>
+  <section />
+  <ul
+    className="item-list"
+  />
+  <div
+    className="ItemList__button-container"
+  >
+    <Button
+      className="Item__add-item-button"
+      tag={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Link",
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        }
+      }
+      to="/add-item"
+      type="button"
+    >
+      add item
+    </Button>
+  </div>
+</section>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item component renders a .Item by default 1`] = `
+<div
+  className="Item"
+>
+  <h2
+    className="Item__title"
+  />
+  <button
+    className="Item__delete"
+    onClick={[Function]}
+    type="button"
+  >
+     
+    remove
+  </button>
+</div>
+`;
+
+exports[`Item component renders the Item given props 1`] = `
+<div
+  className="Item"
+>
+  <h2
+    className="Item__title"
+  >
+    test-class-name
+  </h2>
+  <button
+    className="Item__delete"
+    onClick={[Function]}
+    type="button"
+  >
+     
+    remove
+  </button>
+</div>
+`;

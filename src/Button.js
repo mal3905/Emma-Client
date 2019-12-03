@@ -1,19 +1,19 @@
 import React from 'react'
 
 
-export default function NavCuteButton(props) {
+export default function Button(props) {
   const { tag, className, childrenm, ...otherProps } = props
 
   return React.createElement(
     props.tag,
     {
-      className: ['NavCuteButton', props.className].join(' '),
+      className: ['Button', props.className].join(' '),
       ...otherProps
     },
     props.children
   )
 }
 
-NavCuteButton.defaultProps ={
+Button.defaultProps ={
   tag: 'a',
 }
