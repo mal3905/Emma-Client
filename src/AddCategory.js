@@ -17,6 +17,7 @@ export default class AddCategory extends Component {
     e.preventDefault()
     const categories = {
       name: e.target['category-name-input'].value
+
     }
     // console.log(`for add ${categories}`)
     // console.log(this.name.value)
@@ -36,7 +37,7 @@ export default class AddCategory extends Component {
         return res.json()
       }) 
       .then(category => {
-        this.context.addCategories(categories)
+        this.context.addCategories({...categories, id: category.id})
         this.props.history.push(`/category/${category.id}`)
         // console.log(this.state)
       })

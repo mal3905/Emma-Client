@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": "mal3905-emma-app",
+    "name": "emma-app",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+  }
