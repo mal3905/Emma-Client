@@ -149,6 +149,16 @@ export default  class App extends Component {
                 <header className='header'>
                 <h1 className='title'>Emma</h1>
                 <h2 className='sub-title'> Grocery List Assistant</h2>
+                <h3>No more headaches from scrouring your kitchen to see what you need!</h3>
+                  <p>With Emma, you can now save more time when when determining what you are
+                   running low on and what you need to buy. </p>
+                  <p>You start out by creating your weekly grocery list with Emma and Emma 
+                    will begin learning how often you buy a product, and eventually start
+                    generating a tailored grocery list for you based on how often you buy a
+                    product.</p>
+                    <p>You can add or delete items and create new categories according to your needs!</p>
+
+
                 </header>
                 <nav className='App__nav'>
                     {this.renderNavRoutes()}
