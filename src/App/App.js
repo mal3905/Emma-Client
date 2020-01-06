@@ -157,6 +157,10 @@ export default  class App extends Component {
                     and easily create new lists.</p>
                     <p>You can add or delete items and create new categories according to your needs!</p>
 
+                    <p>Simply start by creating or selecting a category and add  items by clicking on the 'add item' button
+                      on the bottom of the page.
+                    </p>
+
 
                 </header>
                 <nav className='App__nav'>

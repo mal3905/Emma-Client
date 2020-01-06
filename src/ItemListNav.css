@@ -10,6 +10,7 @@
   max-width: 180px;
   padding: 4px 8px;
   text-decoration: none;
+
   
 
   }
@@ -28,10 +29,25 @@
   }
 
   .ItemListNav__list {
-  display: flex;
-  justify-content: space-evenly;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-gap: 2px; */
+  margin-left: -30px;
+  
+ 
   }
+  @media only screen and (min-width: 580px) {
+    .ItemListNav__list {
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+
+      }
+  }
+
+
+
+
 /* ul {
     display: flex;
     flex-direction: row;
