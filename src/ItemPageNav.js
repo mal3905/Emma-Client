@@ -28,7 +28,7 @@ export default class ItemPageNav extends React.Component {
           onClick={() => this.props.history.goBack()}
           className='ItemPageNav__back-button'
         >
-          Home
+         Back
         </Button>
         {category && (
           <h3 className='ItemPageNav__category-name'>

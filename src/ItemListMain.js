@@ -51,6 +51,10 @@ export default class ItemListMain extends React.Component {
             add item
           </Button>
         </div>
+
+        <div class='home'>
+          <Link to={'/'}>Home</Link>
+        </div>
       </section>
     )
   }

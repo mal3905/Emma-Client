@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import config from '../config'
 import MyContext from '../MyContext'
 import AddCategory from '../AddCategory'
@@ -7,6 +7,7 @@ import AddItem from '../AddItem'
 import ItemListMain from '../ItemListMain'
 import ItemPageNav from '../ItemPageNav'
 import ItemListNav from '../ItemListNav'
+import LandingPage from '../LandingPage' 
 // import ItemPageMain from '../ItemPageMain'
 import './App.css'
 
@@ -73,7 +74,16 @@ export default  class App extends Component {
         renderNavRoutes() {
             return (
               <>
-                {['/', '/category/:categoryid'].map(path =>
+                {['/'].map(path =>
+                  <Route
+                    exact
+                    key={path}
+                    path={path}
+                    component={LandingPage}
+                  />
+                )}
+
+                {['/list', '/category/:categoryid'].map(path =>
                   <Route
                     exact
                     key={path}
@@ -101,8 +111,7 @@ export default  class App extends Component {
             renderRoutes() {
                 return (
                     <>
-                    
-                    {['/', '/category/:categoryid'].map(path => 
+                    {['/list', '/category/:categoryid'].map(path => 
                         <Route
                         exact
                         key={path}
@@ -149,17 +158,6 @@ export default  class App extends Component {
                 <header className='header'>
                 <h1 className='title'>Emma</h1>
                 <h2 className='sub-title'> Grocery List Assistant</h2>
-                <h3>No more headaches from scrouring your kitchen to see what you need!</h3>
-                  <p>With Emma, you can now save more time when when determining what you are
-                   running low on and what you need to buy. </p>
-                  <p>You start out by creating your weekly grocery list with Emma and be able to see how often you are buying
-                    certain products. Over time you'll be able to check your list and see what you may need to buy 
-                    and easily create new lists.</p>
-                    <p>You can add or delete items and create new categories according to your needs!</p>
-
-                    <p>Simply start by creating or selecting a category and add  items by clicking on the 'add item' button
-                      on the bottom of the page.
-                    </p>
 
 
                 </header>
@@ -171,7 +169,6 @@ export default  class App extends Component {
                 <section className='App__main'>
                     {this.renderRoutes()}
                 </section>
-                   
                 </main>
                 </MyContext.Provider>
             
