@@ -1,0 +1,42 @@
+.item-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add-btn {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 30px;
+    border: black solid 1px;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 0px 370px 0px 380px;
+} 
+
+.item-list a {
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.home {
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    margin: 100px 350px 0px 350px;
+    border: 2px solid black;
+    text-decoration: none;
+    background-color: transparent;
+    list-style-type: none;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (min-width: 480px) {
+    
+}

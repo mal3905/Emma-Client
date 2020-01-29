@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+// import { RouteProps } from 'react-router-dom'
 import config from '../config'
-import MyContext from '../MyContext'
-import AddCategory from '../AddCategory'
-import AddItem from '../AddItem'
-import ItemListMain from '../ItemListMain'
-import ItemPageNav from '../ItemPageNav'
-import ItemListNav from '../ItemListNav'
-import LandingPage from '../LandingPage' 
+import MyContext from '../contexts/MyContext'
+import Category from '../Category/Category'
+import AddItem from '../AddItem/AddItem'
+import ItemListMain from '../ItemListMain/ItemListMain'
+import ItemPageNav from '../ItemPageNav/ItemPageNav'
+import ItemListNav from '../ItemListNav/ItemListNav'
+import LandingPage from '../LandingPage/LandingPage' 
 // import ItemPageMain from '../ItemPageMain'
 import './App.css'
 
@@ -127,7 +127,7 @@ export default  class App extends Component {
 
                         <Route 
                         path='/add-category'
-                        component={AddCategory}
+                        component={Category}
                         />
 
                         <Route
@@ -157,7 +157,6 @@ export default  class App extends Component {
             <main className='App'>
                 <header className='header'>
                 <h1 className='title'>Emma</h1>
-                <h2 className='sub-title'> Grocery List Assistant</h2>
 
 
                 </header>
