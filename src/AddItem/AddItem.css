@@ -1,0 +1,21 @@
+#item-category-select {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+    color: rgb(15, 15, 14);
+    margin-bottom: 10px;
+    box-shadow: 1px 10px 14px -5px #1f2122;
+    border: #83c3ce .89px solid;
+}
+
+.button {
+ max-width: 37px;
+ box-shadow: 1px 10px 14px -5px #1f2122;
+    border: #83c3ce .89px solid;
+
+}
+
+input {
+    border: gray solid 1px;
+    margin-bottom: 10px;
+    box-shadow: 1px 10px 14px -5px #1f2122;
+}

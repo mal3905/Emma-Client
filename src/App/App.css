@@ -1,10 +1,17 @@
 html {
-  text-align: center;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
   background-color: rgba(245, 241, 241, 0.578);
+  padding:0px;
+  
+}
+
+.main{
+  text-align: center;
+padding: 15px;
+  border: dotted 10px rgba(157, 218, 222, 0.98);
+  
+  
 }
 
 
@@ -14,7 +21,6 @@ html {
   flex-direction: column;
   font-family: 'Bree Serif', serif;
   background-color: rgba(245, 241, 241, 0.578);
-
 }
 
 header {
@@ -27,9 +33,12 @@ header {
 
 .title{
   color: rgba(157, 218, 222, 0.98);
-  font-size: 100px;
+  font-size: 80px;
   font-weight: bold;
   border: none;
   font-family: 'Noto Serif KR', serif;
 }
 
+Button, select {
+  cursor: pointer;
+}

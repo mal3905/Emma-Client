@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { RouteProps } from 'react-router-dom'
+import { Route} from 'react-router-dom'
 import config from '../config'
 import MyContext from '../contexts/MyContext'
 import Category from '../Category/Category'
@@ -119,10 +119,7 @@ export default  class App extends Component {
                         component={ItemListMain}
                       />
                     )}
-                        {/* <Route
-                        path='/item/:itemid'
-                        component={ItemPageMain}
-                        /> */}
+                  
 
 
                         <Route 
@@ -156,19 +153,17 @@ export default  class App extends Component {
         <MyContext.Provider value={value}>
             <main className='App'>
                 <header className='header'>
-                <h1 className='title'>Emma</h1>
-
-
+                  <h1 className='title'>Emma</h1>
                 </header>
-                <nav className='App__nav'>
-                    {this.renderNavRoutes()}
-                </nav>
-                
-               
-                <section className='App__main'>
+                <div className="main">
+                  <nav className='App__nav'>
+                      {this.renderNavRoutes()}
+                  </nav>
+                  <section className='App__main'>
                     {this.renderRoutes()}
-                </section>
-                </main>
+                  </section> 
+                </div>
+              </main>
                 </MyContext.Provider>
             
             

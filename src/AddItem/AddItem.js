@@ -50,16 +50,13 @@ export default class AddItem extends Component {
         <Form onSubmit={this.handleSubmit}>
           <div className='field'>
             <label htmlFor='item-name-input'>
-              {/* Name */}
             </label>
             <input type='text' id='item-name-input' name='item-name' placeholder='name' />
           </div>
           <div className='field'>
-            <label htmlFor='item-category-select'>
-              {/* Category */}
-            </label>
+            <label htmlFor='item-category-select'></label>
             <select id='item-category-select' name='item-category-id'>
-              <option value={null}>Select Category</option>
+              <option value={null}>Select Category...</option>
               {categories.map(category =>
                 <option key={category.id} value={category.id}>
                   {category.name}
@@ -67,7 +64,7 @@ export default class AddItem extends Component {
               )}
             </select>
           </div>
-          <div className='buttons'>
+          <div className='button'>
             <button type='submit'>
               Add
             </button>

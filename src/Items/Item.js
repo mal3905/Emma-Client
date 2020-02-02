@@ -40,12 +40,10 @@ export default class Item extends React.Component {
     return (
       <div className='Item'>
         <h2 className='Item__title'>
-          {/* <Link to={`/items/${itemId}`}> */}
             {name}
-          {/* </Link> */}
         </h2>
         <button
-          className='Item__delete'
+          className='delete'
           type='button'
           onClick={this.handleClickDelete}
         >

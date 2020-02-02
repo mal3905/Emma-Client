@@ -26,7 +26,7 @@ export default class ItemPageNav extends React.Component {
           tag='button'
           role='link'
           onClick={() => this.props.history.goBack()}
-          className='ItemPageNav__back-button'
+          className='ItemPageNav__back'
         >
          Back
         </Button>

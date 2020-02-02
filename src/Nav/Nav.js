@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import UsersContext from '../../src/contexts/UserContext';
-// import './Nav.css';
+import UsersContext from '../contexts/UserContext'
+import './Nav.css';
 
 export default class Nav extends Component {
 
@@ -12,9 +12,9 @@ export default class Nav extends Component {
     }
 
     render() {
-        const links = [{to: '/home', name: 'Home'}, {to: '/dashboard', name: 'Breweries'}, {
-            to: '/add',
-            name: 'Add Beer'
+        const links = [{to: '/', name: 'Home'}, {to: '/list', name: 'List'}, {
+            to: '/list',
+            name: 'list'
         }]
         return (
             <nav className={'navbar-component'}>

@@ -13,6 +13,9 @@ export default class ItemListNav extends React.Component {
     const { categories=[] } = this.context
     return (
       <div className='ItemListNav'>
+        <div class='home'>
+          <Link to={'/'}>Home</Link>
+        </div>
         <ul className='ItemListNav__list'>
           {categories.map(categories =>
             <li key={categories.id}>
@@ -36,7 +39,7 @@ export default class ItemListNav extends React.Component {
             tag={Link}
             to='/add-category'
             type='button'
-            className='ItemListNav__add-category-button'
+            className='category-button'
           >
             Add Category
           </Button>

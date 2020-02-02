@@ -28,11 +28,6 @@ export default class ItemListMain extends React.Component {
 
     return (
       <section className='ItemList'>
-        <div class='home'>
-          <Link to={'/'}>Home</Link>
-        </div>
-        <section>
-        </section>
         <ul className='item-list'>
           {itemsForCategory.map(item =>
             <li key={item.id}>
@@ -51,7 +46,7 @@ export default class ItemListMain extends React.Component {
             type='button'
             className='Item__add-item-button'
           >
-           +
+           Add Item
           </Button>
         </div>
       </section>
