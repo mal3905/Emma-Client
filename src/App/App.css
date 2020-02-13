@@ -24,10 +24,9 @@ padding: 15px;
 }
 
 header {
-   background-image: url("../images/kitchen3.jpg");
-   background-size: cover;
-   background-position: Top;
-   padding: 50px;
+   background-image: url("../images/food.jpg");
+   background-size: contain;
+   background-position: center;
 }
 
 
@@ -37,6 +36,12 @@ header {
   font-weight: bold;
   border: none;
   font-family: 'Noto Serif KR', serif;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(50, 49, 47, 0.407);
+  margin: 0px;
+  padding: 100px;
+
 }
 
 Button, select {
