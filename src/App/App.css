@@ -3,13 +3,15 @@ html {
   background-size: cover;
   background-color: rgba(245, 241, 241, 0.578);
   padding:0px;
+  font-family: "Noto Serif KR",serif;
   
 }
 
 .main{
-  text-align: center;
+text-align: center;
 padding: 15px;
   border: dotted 10px rgba(157, 218, 222, 0.98);
+  margin: 80px;
   
   
 }
@@ -19,7 +21,6 @@ padding: 15px;
   display: flex;
   justify-self: center;
   flex-direction: column;
-  font-family: 'Bree Serif', serif;
   background-color: rgba(245, 241, 241, 0.578);
 }
 
@@ -32,7 +33,7 @@ header {
 
 .title{
   color: rgba(157, 218, 222, 0.98);
-  font-size: 80px;
+  font-size: 85px;
   font-weight: bold;
   border: none;
   font-family: 'Noto Serif KR', serif;
@@ -46,4 +47,7 @@ header {
 
 Button, select {
   cursor: pointer;
+  
 }
+
+

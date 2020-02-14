@@ -4,6 +4,15 @@ exports[`ItemListNav component renders a .ItemListNav by default 1`] = `
 <div
   className="ItemListNav"
 >
+  <div
+    class="home"
+  >
+    <Link
+      to="/"
+    >
+      Home
+    </Link>
+  </div>
   <ul
     className="ItemListNav__list"
   />
@@ -11,7 +20,7 @@ exports[`ItemListNav component renders a .ItemListNav by default 1`] = `
     className="ItemListNav__button-wrapper"
   >
     <Button
-      className="ItemListNav__add-category-button"
+      className="category-button"
       tag={
         Object {
           "$$typeof": Symbol(react.forward_ref),

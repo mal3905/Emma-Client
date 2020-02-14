@@ -1,31 +1,52 @@
+# Emma
+#### Created by: Maria Danielson
+[Live page](https://mal3905-emma-app.now.sh/)
 
- # Emma: your grocery list assistant
+# Technologies Used
 
- # About
+### Client Side:  
+React | Javascript | Zeit |  HTML | CSS
+
+### Server Side:
+Express.js | Node.js | PostgreSQL | Heroku
+
+# Introduction
  This app allows a user to keep organized with their grocery list of items. The user can add items to the shopping list as well as separate them into different categories. Categories can be chosen through a drop down menu of existing categories. The user can customize their lists according to their needs without any constrictions as to what kind of categories they can make. Items can be deleted and created. The clean styling of the app allows for an easy to use platform and is soft on the eyes. 
 
 
-#### Live page can be found here !
-[Emma: your grocery list assistant](https://emma-app-f6xxigitj.now.sh/)
-#### GITHUB:
-[Emma: your grocery list assistant](https://mal3905.github.io/Emma-Client2/)
+# Landing Page
+![Landing page](./src/images/emmaLP.png)
 
-### Technologies
-Client: React, Javascript, HTML and CSS
-Server: Express.js, Node.js, PostgreSQL
+# Dashboard
+![Login](./src/images/emmaDB.png)
 
-#### Links to code 
-[Client](https://github.com/mal3905/Emma-Client2.git)
+# Add Items Form
+![Add Beer Form](./src/images/additem.png)
+
+
+# Add Category Form
+![Breweries Map](./src/images/addcategory.png)
+
+[Client](https://github.com/mal3905/Emma-Client.git)
 [Server](https://github.com/mal3905/emma-server.git)
 
-## Screen Shots
-#### Home page 
-![Main page](./images/main.png)
-#### Add Item Page
-![Add Item](./images/item.png)
-#### Add Category Page
-![Add Category](./images/category.png)
+Getting Started
+Installing
+Clone the repository and download dependencies.
+
+$ git clone https://github.com/mal3905/Emma-Client.git
+$ cd Group4-Capstone-3
+$ npm install
+Launching
+Start the development server.
+
+$ npm run start
 
 
-created by : Maria Danielson  2019
+Testing
+Run tests
+$ npm run test
+
+
+
 

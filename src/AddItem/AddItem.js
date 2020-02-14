@@ -64,11 +64,9 @@ export default class AddItem extends Component {
               )}
             </select>
           </div>
-          <div className='button'>
-            <button type='submit'>
+            <button type='submit' class="submit-btn">
               Add
             </button>
-          </div>
         </Form>
       </section>
     )

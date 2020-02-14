@@ -5,7 +5,7 @@ exports[`ItemPageNav component renders a .ItemPageNav by default 1`] = `
   className="ItemPageNav"
 >
   <Button
-    className="ItemPageNav__back-button"
+    className="ItemPageNav__back"
     onClick={[Function]}
     role="link"
     tag="button"

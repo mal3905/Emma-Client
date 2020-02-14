@@ -13,7 +13,7 @@ exports[`ItemPageMain component renders a .ItemPageMain by default 1`] = `
       Dogs
     </h2>
     <button
-      className="Item__delete"
+      className="delete"
       onClick={[Function]}
       type="button"
     >

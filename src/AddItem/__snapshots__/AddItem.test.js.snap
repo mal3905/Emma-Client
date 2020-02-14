@@ -38,12 +38,12 @@ exports[`AddItem component renders the complete form 1`] = `
         <option
           value={null}
         >
-          Select Category
+          Select Category...
         </option>
       </select>
     </div>
     <div
-      className="buttons"
+      className="button"
     >
       <button
         type="submit"
